@@ -39,7 +39,7 @@ Oh, did I forget to mention *animation*? WebP also supports animation with small
 
 ## What WebP Can't Do
 
-WebP isn't yet welcome at image sharing sites like imgur **(CHECK THIS)** or Instagram **(CHECK THAT TOO)** or Flickr **(AND THAT)**. Having said that, Google created WebP so YouTube (owned by Google) plays well with WebP for banner images and thumbnails. **WHAT ABOUT GOOGLE PHOTOS?**
+WebP isn't yet welcome at image sharing sites like imgur **(CHECK THIS)** or Instagram **(CHECK THAT TOO)** or Flickr **(AND THAT)**. Having said that, Google created WebP so Google Photos, YouTube, and Gmail all play well with WebP.
 
 ## Implementations
 
@@ -50,21 +50,17 @@ WebP isn't yet welcome at image sharing sites like imgur **(CHECK THIS)** or Ins
 - If you're like me and don't want to upgrade to the latest version of Photoshop for whatever reason, you can use Google's WebPShop plug-in and use it with an older version of Photoshop *or the current version of Photoshop* because the plug-in fills in the gaps still remaining in Photoshop. Find instructions for installing and using the plug in at:
   - [Adobe](https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html)
   - [Google](https://developers.google.com/speed/webp/docs/webpshop)
+- A growing number of other apps such as Picasa, ImageMagick, Blender, and GIMP all welcome WebP.
 
-## Using WebP in Your Website
+## Using WebP in Your Website and Browser Compatibility
 
-> "Setting up a website to serve WebP images is ... frustratingly ... more complicated than it should be."
+You can use the ```html <img>``` tag like you would for JPG or PNG but for browser compatibility reasons alone, you should take advantage of the ```html <picture>``` tag and ```html srcset``` attribute instead. Experienced devs will already be used to using the following method for responsive images and websites.
 
-I doubt the above statement is true. A simple browser check should do it.
-
-For single code use markdown as follows:
-
-```cpp
-<picture></picture>
+```html
+<picture>
+    <source type="image/webp" srcset="funnycatpicture.webp">
+    <source type="image/jpeg" srcset="funnycatpicture.jpg">
+    <img src="funnycatpicture.jpg" alt="My cat being derpy">
+</picture>
 ```
 
-### Browser Compatibility
-
-Not **Safari** or **Internet Explorer**?
-
-So you must use both WebP and either JPG or PNG versions for universal compatibility but experienced devs will be used to similar situations.
