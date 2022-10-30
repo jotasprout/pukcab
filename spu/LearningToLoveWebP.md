@@ -10,13 +10,6 @@ Reading time: 15 minutes | Coding time: 5 minutes
 - Converting images to and from WebP
 - Browser Support
 
-### Complexity
-
-- Worst case time complexity:
-- Average case time complexity:
-- Best case time complexity:
-- Space complexity:
-
 ## Why You Hate WebP Right Now
 
 There are few things as infuriating as right-clicking something on a web page only to discover right-clicking is disabled. You may feel, however, that the following situation comes pretty close.
@@ -54,7 +47,7 @@ WebP isn't yet welcome at image sharing sites like imgur **(CHECK THIS)** or Ins
 
 ## Using WebP in Your Website and Browser Compatibility
 
-You can use the ```html <img>``` tag like you would for JPG or PNG but for browser compatibility reasons alone, you should take advantage of the ```html <picture>``` tag and ```html srcset``` attribute instead. Experienced devs will already be used to using the following method for responsive images and websites.
+You can use the ```<img>``` tag like you would for JPG or PNG but for browser compatibility reasons alone, you should take advantage of the ```<picture>``` tag and ```srcset``` attribute instead. Experienced devs will already be used to using the following method for responsive images and websites.
 
 ```html
 <picture>
