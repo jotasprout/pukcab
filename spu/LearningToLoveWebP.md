@@ -8,7 +8,7 @@ Reading time: 15 minutes | Coding time: 5 minutes
 - Why You'll Love WebP
 - What WebP can't do
 - Converting images to and from WebP
-- Browser Support
+- Using WebP in Your Website and Browser Compatibility
 
 ## Why You Hate WebP Right Now
 
@@ -30,24 +30,28 @@ Now imagine a world with a file format that has everything you love about PNG as
 
 Oh, did I forget to mention *animation*? WebP also supports animation with smaller file size and higher quality than a **GIF**.
 
-## What WebP Can't Do
+### What WebP Can't Do
 
-WebP isn't yet welcome at image sharing sites like imgur **(CHECK THIS)** or Instagram **(CHECK THAT TOO)** or Flickr **(AND THAT)**. Having said that, Google created WebP so Google Photos, YouTube, and Gmail all play well with WebP.
+WebP isn't yet welcome at image sharing sites like imgur or Flickr. While Facebook let me upload a WebP image, Instagram would not.
+
+Having said that, Google created WebP so Google Photos, YouTube, and Gmail all play well with WebP.
 
 ## Implementations
 
-### Creating/Converting images to and from WebP
+### Converting images to and from WebP
 
 - The [official Google page for WebP](https://developers.google.com/speed/webp) includes links to tools and libraries (Windows, MacOS, Linux) for encoding, decoding, viewing, and animating the WebP format.
-- As of version 23.2, Photoshop natively supports opening, creating, editing, and saving WebP but doesn't provide support for previewing when saving or for animation. One thing that makes this great news is you can batch convert oodles of images from the originals instead of using a tool or service that only converts from already compressed/degraded JPGs.
+- As of version 23.2, Photoshop natively supports opening, creating, editing, and saving WebP but doesn't provide support for previewing when saving or for animation. One thing that made this great news is you can batch convert oodles of images from the originals instead of using a tool or service that only converts from already compressed/degraded JPGs.
 - If you're like me and don't want to upgrade to the latest version of Photoshop for whatever reason, you can use Google's WebPShop plug-in and use it with an older version of Photoshop *or the current version of Photoshop* because the plug-in fills in the gaps still remaining in Photoshop. Find instructions for installing and using the plug in at:
   - [Adobe](https://helpx.adobe.com/photoshop/kb/support-webp-image-format.html)
   - [Google](https://developers.google.com/speed/webp/docs/webpshop)
 - A growing number of other apps such as Picasa, ImageMagick, Blender, and GIMP all welcome WebP.
 
-## Using WebP in Your Website and Browser Compatibility
+### Using WebP in Your Website and Browser Compatibility
 
 You can use the ```<img>``` tag like you would for JPG or PNG but for browser compatibility reasons alone, you should take advantage of the ```<picture>``` tag and ```srcset``` attribute instead. Experienced devs will already be used to using the following method for responsive images and websites.
+
+The ```<picture>``` tag allows you to list alternate sources for an image. 
 
 ```html
 <picture>
@@ -57,3 +61,4 @@ You can use the ```<img>``` tag like you would for JPG or PNG but for browser co
 </picture>
 ```
 
+If the browser can display the first source, it will. If not, it moves on to the next in the list. The last in the list should be an image in an ```<img>``` tag with a default, universally compatible image.
